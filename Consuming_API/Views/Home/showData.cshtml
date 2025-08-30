@@ -1,0 +1,27 @@
+﻿@model IEnumerable<villaDTO>
+
+<h2>Villa List</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Villa Name</th>
+            <th>Rate</th>
+            <th>Occupancy</th>
+            <th>Image URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var villa in Model)
+        {
+            <tr>
+                <td>@villa.VillaId</td>
+                <td>@villa.VillaName</td>
+                <td>@villa.VillaRate</td>
+                <td>@villa.VillaOccupancy</td>
+                <td>@villa.VillaImageURL</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

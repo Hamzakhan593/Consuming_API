@@ -1,0 +1,28 @@
+﻿@model villaDTO
+
+<form asp-action="CreateVilla" method="post">
+    <div class="form-group">
+        <label>Villa Name</label>
+        <input asp-for="VillaName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Rate</label>
+        <input asp-for="VillaRate" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label>Occupancy</label>
+        <input asp-for="VillaOccupancy" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label>Image URL</label>
+        <input asp-for="VillaImageURL" class="form-control" />
+    </div>
+        <div class="form-group">
+        <label>Amenity</label>
+        <input asp-for="VillaAmenity" class="form-control" />
+    </div>    <div class="form-group">
+        <label>Details</label>
+        <input asp-for="VillaDetails" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Villa</button>
+</form>

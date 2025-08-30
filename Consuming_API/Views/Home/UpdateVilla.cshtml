@@ -1,0 +1,67 @@
+﻿@model Consuming_API.Models.villaDTO
+
+
+<h1>UpdateVilla</h1>
+
+<h4>villaDTO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateVilla">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VillaId" class="control-label"></label>
+                <input asp-for="VillaId" class="form-control" />
+                <span asp-validation-for="VillaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillaName" class="control-label"></label>
+                <input asp-for="VillaName" class="form-control" />
+                <span asp-validation-for="VillaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillaDetails" class="control-label"></label>
+                <input asp-for="VillaDetails" class="form-control" />
+                <span asp-validation-for="VillaDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillaRate" class="control-label"></label>
+                <input asp-for="VillaRate" class="form-control" />
+                <span asp-validation-for="VillaRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillaOccupancy" class="control-label"></label>
+                <input asp-for="VillaOccupancy" class="form-control" />
+                <span asp-validation-for="VillaOccupancy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillaSqft" class="control-label"></label>
+                <input asp-for="VillaSqft" class="form-control" />
+                <span asp-validation-for="VillaSqft" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillaImageURL" class="control-label"></label>
+                <input asp-for="VillaImageURL" class="form-control" />
+                <span asp-validation-for="VillaImageURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VillaAmenity" class="control-label"></label>
+                <input asp-for="VillaAmenity" class="form-control" />
+                <span asp-validation-for="VillaAmenity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

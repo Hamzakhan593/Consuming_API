@@ -1,0 +1,30 @@
+﻿@model villaDTO
+
+@{
+    ViewData["Title"] = "Villa Details";
+}
+
+<h2>Villa Details</h2>
+
+<div class="card shadow p-4">
+    <h4>@Model.VillaName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Villa ID</dt>
+        <dd class="col-sm-9">@Model.VillaId</dd>
+
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.VillaName</dd>
+
+        <dt class="col-sm-3">Price</dt>
+        <dd class="col-sm-9">@Model.VillaRate PKR</dd>
+
+        <dt class="col-sm-3">Square Feet</dt>
+        <dd class="col-sm-9">@Model.VillaSqft</dd>
+
+        <dt class="col-sm-3">Occupancy</dt>
+        <dd class="col-sm-9">@Model.VillaOccupancy</dd>
+    </dl>
+</div>
+
+<a asp-action="Index" class="btn btn-primary mt-3">Back to List</a>
